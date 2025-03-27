@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PVA Zone - Buy Social Media Accounts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #ff8c00;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            color: white;
+            font-size: 24px;
+        }
+        
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-box {
+            position: relative;
+            margin-right: 20px;
+        }
+        
+        .search-box input {
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            width: 200px;
+        }
+        
+        .search-box button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #ff8c00;
+            cursor: pointer;
+        }
+        
+        .cart-icon, .menu-toggle {
+            color: white;
+            font-size: 20px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        
+        /* Slider Section */
+        .slider {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x400');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slide-content {
+            width: 100%;
+            padding: 0 20px;
+        }
+        
+        .slide-content h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .slide-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #ff8c00;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #e67e00;
+        }
+        
+        /* Main Content Sections */
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 32px;
+            color: #ff8c00;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Services Section */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 40px;
+            color: #ff8c00;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            margin-bottom: 15px;
+        }
+        
+        /* Banner Section */
+        .banner {
+            background-color: #ff8c00;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 40px;
+        }
+        
+        .banner h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .feature-icon {
+            font-size: 30px;
+            color: #ff8c00;
+            margin-bottom: 15px;
+        }
+        
+        /* Products Section */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .product-img {
+            height: 200px;
+            background-color: #eee;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            margin-bottom: 10px;
+        }
+        
+        .product-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: #ff8c00;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: #ff8c00;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #ff8c00;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #ff8c00;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            .header-right {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .search-box {
+                margin-right: 10px;
+            }
+            
+            .slider {
+                height: 300px;
+            }
+            
+            .slide-content h2 {
+                font-size: 28px;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://via.placeholder.com/40x40" alt="PVA Zone Logo">
+                <h1>PVA Zone</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Slider Section -->
+    <section class="slider">
+        <div class="slide-content">
+            <h2>Welcome to PVA Zone</h2>
+            <p>Your trusted source for high-quality social media accounts. Buy Instagram, Facebook, Twitter and more with instant delivery!</p>
+            <a href="#services" class="btn">View Services</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>PVA Zone</h2>
+                <p>We are the leading provider of premium social media accounts since 2020. With over 10,000 satisfied customers, we guarantee quality and instant delivery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We offer a wide range of social media accounts for all your needs</p>
+            </div>
+            <div class="services">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram Accounts</h3>
+                    <p>High-quality PVA Instagram accounts with full access and warranty</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3>Facebook Accounts</h3>
+                    <p>Old and new Facebook accounts with email access</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <h3>Twitter Accounts</h3>
+                    <p>Verified and aged Twitter accounts ready to use</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>YouTube Accounts</h3>
+                    <p>Monetized YouTube accounts with watch hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="section">
+        <div class="container">
+            <div class="banner">
+                <h2>Special Offer - 50% Discount</h2>
+                <p>Limited time offer for bulk purchases. Get 50+ accounts at half price!</p>
+                <a href="#" class="btn" style="background-color: white; color: #ff8c00;">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Us?</h2>
+                <p>We provide the best service in the industry with these benefits</p>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Instant Delivery</h3>
+                    <p>Get your accounts within minutes after payment</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>100% Guarantee</h3>
+                    <p>Replacement guarantee if any issue occurs</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our team is always ready to help you</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Secure Payment</h3>
+                    <p>All payments are encrypted and secure</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Products</h2>
+                <p>Browse our most popular social media accounts</p>
+            </div>
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+                    <div class="product-info">
+                        <h3>Instagram PVA Accounts</h3>
+                        <p>Phone verified Instagram accounts with profile picture</p>
+                        <div class="price">$5.99</div>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+                    <div class="product-info">
+                        <h3>Facebook Business Accounts</h3>
+                        <p>Aged Facebook accounts with business manager access</p>
+                        <div class="price">$8.99</div>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+                    <div class="product-info">
+                        <h3>Twitter Verified Accounts</h3>
+                        <p>Blue badge verified Twitter accounts</p>
+                        <div class="price">$15.99</div>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+                    <div class="product-info">
+                        <h3>YouTube Monetized Accounts</h3>
+                        <p>Ready-to-earn YouTube channels with 4000 watch hours</p>
+                        <div class="price">$49.99</div>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PVA Zone</h3>
+                    <p>Your trusted source for premium social media accounts since 2020.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Instagram Accounts</a></li>
+                        <li><a href="#">Facebook Accounts</a></li>
+                        <li><a href="#">Twitter Accounts</a></li>
+                        <li><a href="#">YouTube Accounts</a></li>
+                        <li><a href="#">Bulk Orders</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@pva-zone.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+                        <li><i class="fab fa-whatsapp"></i> +1 (123) 456-7890</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 PVA Zone. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for Slider -->
+    <script>
+        // Simple slider functionality
+        const slides = [
+            {
+                title: "Welcome to PVA Zone",
+                desc: "Your trusted source for high-quality social media accounts",
+                btn: "View Services"
+            },
+            {
+                title: "Instant Delivery",
+                desc: "Get your accounts within minutes after payment",
+                btn: "Shop Now"
+            },
+            {
+                title: "Bulk Discounts Available",
+                desc: "Special prices for orders of 50+ accounts",
+                btn: "Get Discount"
+            }
+        ];
+        
+        let currentSlide = 0;
+        const slideContent = document.querySelector('.slide-content');
+        
+        function changeSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            const slide = slides[currentSlide];
+            slideContent.innerHTML = `
+                <h2>${slide.title}</h2>
+                <p>${slide.desc}</p>
+                <a href="#services" class="btn">${slide.btn}</a>
+            `;
+        }
+        
+        // Change slide every 5 seconds
+        setInterval(changeSlide, 5000);
+        
+        // Mobile menu toggle functionality
+        const menuToggle = document.querySelector('.menu-toggle');
+        const headerRight = document.querySelector('.header-right');
+        
+        menuToggle.addEventListener('click', () => {
+            headerRight.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
